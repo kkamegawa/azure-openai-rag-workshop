@@ -58,7 +58,7 @@ resource search 'Microsoft.Search/searchServices@2024-06-01-preview' = {
     replicaCount: replicaCount
     semanticSearch: semanticSearch
   }
-  sku: sku
+  sku: {name: sku.name}
 }
 
 output id string = search.id
